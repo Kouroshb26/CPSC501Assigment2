@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class Inspector {
 
     public static void main(String[] args) {
-        new Inspector().inspect(new ClassD[12], true);
+        new Inspector().inspect(new ClassB[12], true);
     }
 
     public void inspect(Object obj, boolean recursive) {
@@ -18,16 +18,6 @@ public class Inspector {
     }
 
     private void inspectClass(Class c, Object obj, boolean recursive, int depth) {
-
-        //Todo Not sure how to deal with arrays
-        if (c.isArray()) {
-            println(depth, "This class is an array type with name " + c.getSimpleName());
-            println(depth, "This is an array of " + c.getComponentType().getSimpleName());
-            for (int i = 0; i < Array.getLength(obj); i++) {
-                inspectClass(c.getComponentType(), Array.get(obj, i), recursive, depth + 1);
-            }
-        }
-
 
         //Name
         println(depth, "The class name is " + c.getSimpleName());
@@ -67,23 +57,42 @@ public class Inspector {
         if (c.getDeclaredFields().length > 1) {
             println(depth, "The fields are:");
             for (Field field : c.getDeclaredFields()) {
+                field.setAccessible(true);
                 println(depth, "===========================================");
                 println(depth, " The name is " + field.getName());
                 println(depth, " The type is " + field.getType().getSimpleName());
                 println(depth, " The modifiers are " + Modifier.toString(field.getModifiers()));
                 try {
-                    if (!Modifier.isPrivate(field.getModifiers())) {
+                    if (obj != null) {
                         Object fieldObject = field.get(obj);
-                        println(depth, " The value of the field is " + fieldObject.toString());
+                        println(depth, " The value of the field is " + fieldObject);
                         if (recursive) {
-                            inspectClass(fieldObject.getClass(), fieldObject, recursive, depth + 1);
+                            inspectClass(field.getType(), fieldObject, recursive, depth + 1);
+                        } else {
+                            println(depth, variableHashCode(fieldObject, field.getType()));
                         }
                     }
+
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 }
 
             }
+        }
+
+        if (c.isArray()) {
+            println(depth, "This class is an array type with name " + c.getSimpleName());
+            println(depth, "This is an array of " + c.getComponentType().getSimpleName());
+            println(depth, "This array length is  " + Array.getLength(obj));
+            println(depth, "The contents of the array is :");
+            for (int i = 0; i < Array.getLength(obj); i++) {
+                if (recursive) {
+                    inspectClass(c.getComponentType(), Array.get(obj, i), recursive, depth + 1);
+                } else {
+                    println(depth, " " + variableHashCode(Array.get(obj, i), c.getComponentType()));
+                }
+            }
+
         }
     }
 
@@ -118,5 +127,13 @@ public class Inspector {
 
     private void println(int depth, String output) {
         System.out.println(getPrefixString(depth) + output);
+    }
+
+    String variableHashCode(Object obj, Class<?> type) {
+        if (type.isPrimitive()) {
+            return obj.toString();
+        } else {
+            return obj.getClass() + "@" + Integer.toHexString(System.identityHashCode(obj));
+        }
     }
 }
