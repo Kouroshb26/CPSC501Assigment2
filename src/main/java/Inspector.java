@@ -34,16 +34,10 @@ public class Inspector {
 
 
         //Supper Class
-        if (c.getSuperclass() != null) {
-            println(depth, " The super class is " + c.getSuperclass().getSimpleName());
-            inspectClass(c.getSuperclass(), c.getSuperclass().cast(obj), recursive, depth + 1);
-        }
+        superClass(c, obj, recursive, depth);
 
         //Interfaces
-        if (c.getInterfaces().length > 0) {
-            println(depth, " The interfaces are: " + Arrays.stream(c.getInterfaces()).map(Class::getSimpleName).collect(Collectors.joining(",")));
-            Arrays.stream(c.getInterfaces()).forEach(inter -> inspectClass(inter, inter.cast(obj), recursive, depth + 1));
-        }
+        interfaceClasses(c, obj, recursive, depth);
 
         //Constructors
         if (c.getDeclaredConstructors().length > 1) {
@@ -93,7 +87,27 @@ public class Inspector {
         }
     }
 
-    public String getPrefixString(int depth) {
+    String interfaceClasses(Class c, Object obj, boolean recursive, int depth) {
+        String result = null;
+        if (c.getInterfaces().length > 0) {
+            result = " The interfaces are: " + Arrays.stream(c.getInterfaces()).map(Class::getSimpleName).collect(Collectors.joining(","));
+            println(depth, result);
+            Arrays.stream(c.getInterfaces()).forEach(inter -> inspectClass(inter, inter.cast(obj), recursive, depth + 1));
+        }
+        return result;
+    }
+
+    String superClass(Class c, Object obj, boolean recursive, int depth) {
+        String result = null;
+        if (c.getSuperclass() != null) {
+            result = " The super class is " + c.getSuperclass().getSimpleName();
+            println(depth, result);
+            inspectClass(c.getSuperclass(), c.getSuperclass().cast(obj), recursive, depth + 1);
+        }
+        return result;
+    }
+
+    String getPrefixString(int depth) {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < depth; i++) {
             stringBuilder.append("\t");
@@ -102,7 +116,7 @@ public class Inspector {
     }
 
 
-    public void println(int depth, String output) {
+    private void println(int depth, String output) {
         System.out.println(getPrefixString(depth) + output);
     }
 }
