@@ -19,15 +19,8 @@ public class Inspector {
 
     private void inspectClass(Class c, Object obj, boolean recursive, int depth) {
         if (c.isArray()) {
-            println(depth, "This class is an array type with name " + c.getSimpleName());
-            println(depth, "This is an array of " + c.getComponentType().getSimpleName());
-            println(depth, "This array length is  " + Array.getLength(obj));
-            println(depth, "The contents of the array is : " + objectToString(obj, c));
-            if (!c.getComponentType().isPrimitive() && recursive) {
-                for (int i = 0; i < Array.getLength(obj); i++) {
-                    inspectClass(c.getComponentType(), Array.get(obj, i), recursive, depth + 1);
-                }
-            }
+            array(c, obj, recursive, depth);
+
         } else {
             println(depth, "-----------------Start--------------------------");
             //Name
@@ -38,83 +31,115 @@ public class Inspector {
             superClass(c, obj, recursive, depth);
 
             //Interfaces
-            interfaceClasses(c, obj, recursive, depth);
+            interfaces(c, obj, recursive, depth);
 
             //Constructors
-            if (c.getDeclaredConstructors().length > 0) {
-                System.out.println();
-                println(depth, "The constructors are:");
-                for (Constructor constructor : c.getDeclaredConstructors()) {
-                    println(depth, "===========================================");
-                    println(depth, " The name is " + constructor.getName());
-                    println(depth, " The parameters types are (" + Arrays.stream(constructor.getParameterTypes()).map(Class::getSimpleName).collect(Collectors.joining(",")) + ")");
-                    println(depth, " The modifiers are " + Modifier.toString(constructor.getModifiers()));
-                }
-            }
+            constructors(c, depth);
 
-            //Declared Methods
-            if (c.getDeclaredMethods().length > 0) {
-                System.out.println();
-                println(depth, "The methods are:");
-                for (Method method : c.getDeclaredMethods()) {
-                    println(depth, "===========================================");
-                    println(depth, " The name is " + method.getName());
-                    println(depth, " The exceptions are (" + Arrays.stream(method.getExceptionTypes()).map(Class::getSimpleName).collect(Collectors.joining(",")) + ")");
-                    println(depth, " The parameters types are (" + Arrays.stream(method.getParameterTypes()).map(Class::getSimpleName).collect(Collectors.joining(",")) + ")");
-                    println(depth, " The return type is " + method.getReturnType().getSimpleName());
-                    println(depth, " The modifiers are " + Modifier.toString(method.getModifiers()));
-                }
-            }
+            //Methods
+            methods(c, depth);
 
             //Declared Fields
-            if (c.getDeclaredFields().length > 0) {
-                System.out.println();
-                println(depth, "The fields are:");
-                for (Field field : c.getDeclaredFields()) {
-                    field.setAccessible(true);
-                    println(depth, "===========================================");
-                    println(depth, " The name is " + field.getName());
-                    println(depth, " The type is " + field.getType().getSimpleName());
-                    println(depth, " The modifiers are " + Modifier.toString(field.getModifiers()));
-                    try {
-                        if (obj != null) {
-                            Object fieldObject = field.get(obj);
-                            println(depth, " The value of the field is " + objectToString(fieldObject, field.getType()));
-                            if (recursive && !field.getType().isPrimitive()) {
-                                inspectClass(field.getType(), fieldObject, recursive, depth + 1);
-                            }
-                        } else {
-                            println(depth, "Object is null, thus no field value can be accessed");
-                        }
-
-                    } catch (IllegalAccessException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
+            fields(c, obj, recursive, depth);
         }
         println(depth, "-----------------End--------------------------");
     }
 
+    private void array(Class c, Object obj, boolean recursive, int depth) {
+        println(depth, "This class is an array type with name " + c.getSimpleName());
+        println(depth, "This is an array of " + c.getComponentType().getSimpleName());
+        println(depth, "This array length is  " + Array.getLength(obj));
+        println(depth, "The contents of the array is : " + objectToString(obj, c));
+        if (!c.getComponentType().isPrimitive() && recursive) {
+            for (int i = 0; i < Array.getLength(obj); i++) {
+                inspectClass(c.getComponentType(), Array.get(obj, i), recursive, depth + 1);
+            }
+        }
+    }
 
-    String interfaceClasses(Class c, Object obj, boolean recursive, int depth) {
-        String result = null;
+    private void fields(Class c, Object obj, boolean recursive, int depth) {
+        if (c.getDeclaredFields().length > 0) {
+            System.out.println();
+            println(depth, "The fields are:");
+            for (Field field : c.getDeclaredFields()) {
+                field.setAccessible(true);
+                println(depth, "===========================================");
+                println(depth, " The name is " + field.getName());
+                println(depth, " The type is " + field.getType().getSimpleName());
+                println(depth, " The modifiers are " + Modifier.toString(field.getModifiers()));
+                try {
+                    if (obj != null) {
+                        Object fieldObject = field.get(obj);
+                        println(depth, " The value of the field is " + objectToString(fieldObject, field.getType()));
+                        if (recursive && !field.getType().isPrimitive()) {
+                            inspectClass(field.getType(), fieldObject, recursive, depth + 1);
+                        }
+                    } else {
+                        println(depth, "Object is null, thus no field value can be accessed");
+                    }
+
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private void methods(Class c, int depth) {
+        //Declared Methods
+        if (c.getDeclaredMethods().length > 0) {
+            System.out.println();
+            println(depth, "The methods are:");
+            for (Method method : c.getDeclaredMethods()) {
+                println(depth, "===========================================");
+                println(depth, " The name is " + method.getName());
+                println(depth, " The exceptions are (" + Arrays.stream(method.getExceptionTypes()).map(Class::getSimpleName).collect(Collectors.joining(",")) + ")");
+                println(depth, " The parameters types are (" + Arrays.stream(method.getParameterTypes()).map(Class::getSimpleName).collect(Collectors.joining(",")) + ")");
+                println(depth, " The return type is " + method.getReturnType().getSimpleName());
+                println(depth, " The modifiers are " + Modifier.toString(method.getModifiers()));
+            }
+        }
+    }
+
+    private void constructors(Class c, int depth) {
+        //Constructors
+        if (c.getDeclaredConstructors().length > 0) {
+            System.out.println();
+            println(depth, "The constructors are:");
+            for (Constructor constructor : c.getDeclaredConstructors()) {
+                println(depth, "===========================================");
+                println(depth, " The name is " + constructor.getName());
+                println(depth, " The parameters types are (" + Arrays.stream(constructor.getParameterTypes()).map(Class::getSimpleName).collect(Collectors.joining(",")) + ")");
+                println(depth, " The modifiers are " + Modifier.toString(constructor.getModifiers()));
+            }
+        }
+    }
+
+
+    String interfaces(Class c, Object obj, boolean recursive, int depth) {
+        String result;
         if (c.getInterfaces().length > 0) {
             System.out.println();
             result = " The interfaces are: " + Arrays.stream(c.getInterfaces()).map(Class::getSimpleName).collect(Collectors.joining(","));
             println(depth, result);
             Arrays.stream(c.getInterfaces()).forEach(inter -> inspectClass(inter, inter.cast(obj), recursive, depth + 1));
+        } else {
+            result = " There are no interfaces";
+            println(depth, result);
         }
         return result;
     }
 
     String superClass(Class c, Object obj, boolean recursive, int depth) {
-        String result = null;
+        String result;
         if (c.getSuperclass() != null) {
             System.out.println();
             result = " The super class is " + c.getSuperclass().getSimpleName();
             println(depth, result);
             inspectClass(c.getSuperclass(), c.getSuperclass().cast(obj), recursive, depth + 1);
+        } else {
+            result = " There is no superclass";
+            println(depth, result);
         }
         return result;
     }
