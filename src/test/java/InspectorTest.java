@@ -46,4 +46,23 @@ public class InspectorTest {
         assertEquals(" There are no interfaces", inspector.interfaces(Object.class, new Object(), false, 0));
 
     }
+
+    @Test
+    public void objectToStringPrimitive() {
+        String result = inspector.objectToString(1, int.class);
+        assertEquals("1", result);
+    }
+
+    @Test
+    public void objectToStringNull() {
+        String result = inspector.objectToString(null, null);
+        assertEquals("null", result);
+    }
+
+    @Test
+    public void objectToStringReference() {
+        String string = "helloWorld";
+        String result = inspector.objectToString(string, String.class);
+        assertEquals("java.lang.String@" + Integer.toHexString(System.identityHashCode(string)), result);
+    }
 }
