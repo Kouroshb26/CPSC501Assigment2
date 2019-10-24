@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 public class Inspector {
 
     public static void main(String[] args) throws Exception {
-        new Inspector().inspect(new String[][]{{"hello", "helloWolrd"}}, true);
+        new Inspector().inspect(new String[][]{{null, null}, {"hello", "helloWolrd"}}, false);
     }
 
     public void inspect(Object obj, boolean recursive) {
@@ -46,12 +46,12 @@ public class Inspector {
     }
 
     private void array(Class c, Object obj, boolean recursive, int depth) {
-        println(depth, "This class is an array type with name " + c.getSimpleName());
+        println(depth, "This class is an array type " + c.getSimpleName());
         println(depth, "This is an array of " + c.getComponentType().getSimpleName());
         println(depth, "This array length is  " + Array.getLength(obj));
         println(depth, "The contents of the array is : " + objectToString(obj, c));
-        if (!c.getComponentType().isPrimitive() && recursive) {
-            for (int i = 0; i < Array.getLength(obj); i++) {
+        for (int i = 0; i < Array.getLength(obj); i++) {
+            if (!c.getComponentType().isPrimitive() && recursive && Array.get(obj, i) != null) {
                 inspectClass(c.getComponentType(), Array.get(obj, i), recursive, depth + 1);
             }
         }
@@ -71,7 +71,7 @@ public class Inspector {
                     if (obj != null) {
                         Object fieldObject = field.get(obj);
                         println(depth, " The value of the field is " + objectToString(fieldObject, field.getType()));
-                        if (recursive && !field.getType().isPrimitive()) {
+                        if (recursive && !field.getType().isPrimitive() && fieldObject != null) {
                             inspectClass(field.getType(), fieldObject, recursive, depth + 1);
                         }
                     } else {
@@ -176,7 +176,7 @@ public class Inspector {
             return result.toString();
 
         } else {
-            return obj.getClass() + "@" + Integer.toHexString(System.identityHashCode(obj));
+            return type.getName() + "@" + Integer.toHexString(System.identityHashCode(obj));
         }
     }
 }
