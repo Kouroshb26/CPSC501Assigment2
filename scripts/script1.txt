@@ -1,0 +1,174 @@
+======================================================
+Filename: script1.txt
+Running Test: ClassA
+Recursive: true
+-----------------Start--------------------------
+The class name is ClassA
+
+ The super class is Object
+	-----------------Start--------------------------
+	The class name is Object
+	 There is no superclass
+	 There are no interfaces
+
+	The constructors are:
+	===========================================
+	 The name is java.lang.Object
+	 The parameters types are ()
+	 The modifiers are public
+
+	The methods are:
+	===========================================
+	 The name is finalize
+	 The exceptions are (Throwable)
+	 The parameters types are ()
+	 The return type is void
+	 The modifiers are protected
+	===========================================
+	 The name is wait
+	 The exceptions are (InterruptedException)
+	 The parameters types are (long,int)
+	 The return type is void
+	 The modifiers are public final
+	===========================================
+	 The name is wait
+	 The exceptions are (InterruptedException)
+	 The parameters types are (long)
+	 The return type is void
+	 The modifiers are public final native
+	===========================================
+	 The name is wait
+	 The exceptions are (InterruptedException)
+	 The parameters types are ()
+	 The return type is void
+	 The modifiers are public final
+	===========================================
+	 The name is equals
+	 The exceptions are ()
+	 The parameters types are (Object)
+	 The return type is boolean
+	 The modifiers are public
+	===========================================
+	 The name is toString
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is String
+	 The modifiers are public
+	===========================================
+	 The name is hashCode
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is int
+	 The modifiers are public native
+	===========================================
+	 The name is getClass
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is Class
+	 The modifiers are public final native
+	===========================================
+	 The name is clone
+	 The exceptions are (CloneNotSupportedException)
+	 The parameters types are ()
+	 The return type is Object
+	 The modifiers are protected native
+	===========================================
+	 The name is registerNatives
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is void
+	 The modifiers are private static native
+	===========================================
+	 The name is notify
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is void
+	 The modifiers are public final native
+	===========================================
+	 The name is notifyAll
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is void
+	 The modifiers are public final native
+	-----------------End--------------------------
+
+ The interfaces are: Serializable,Runnable
+	-----------------Start--------------------------
+	The class name is Serializable
+	 There is no superclass
+	 There are no interfaces
+	-----------------End--------------------------
+	-----------------Start--------------------------
+	The class name is Runnable
+	 There is no superclass
+	 There are no interfaces
+
+	The methods are:
+	===========================================
+	 The name is run
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is void
+	 The modifiers are public abstract
+	-----------------End--------------------------
+
+The constructors are:
+===========================================
+ The name is ClassA
+ The parameters types are ()
+ The modifiers are public
+===========================================
+ The name is ClassA
+ The parameters types are (int)
+ The modifiers are public
+
+The methods are:
+===========================================
+ The name is run
+ The exceptions are ()
+ The parameters types are ()
+ The return type is void
+ The modifiers are public
+===========================================
+ The name is toString
+ The exceptions are ()
+ The parameters types are ()
+ The return type is String
+ The modifiers are public
+===========================================
+ The name is setVal
+ The exceptions are (Exception)
+ The parameters types are (int)
+ The return type is void
+ The modifiers are public
+===========================================
+ The name is getVal
+ The exceptions are ()
+ The parameters types are ()
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is printSomething
+ The exceptions are ()
+ The parameters types are ()
+ The return type is void
+ The modifiers are private
+
+The fields are:
+===========================================
+ The name is val
+ The type is int
+ The modifiers are private
+ The value of the field is 3
+===========================================
+ The name is val2
+ The type is double
+ The modifiers are private
+ The value of the field is 0.2
+===========================================
+ The name is val3
+ The type is boolean
+ The modifiers are private
+ The value of the field is true
+-----------------End--------------------------
+======================================================

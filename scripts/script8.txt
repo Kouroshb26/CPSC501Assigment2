@@ -1,0 +1,1096 @@
+======================================================
+Filename: script8.txt
+Running Test: Test String
+Recursive: true
+-----------------Start--------------------------
+The class name is String
+
+ The super class is Object
+	-----------------Start--------------------------
+	The class name is Object
+	 There is no superclass
+	 There are no interfaces
+
+	The constructors are:
+	===========================================
+	 The name is java.lang.Object
+	 The parameters types are ()
+	 The modifiers are public
+
+	The methods are:
+	===========================================
+	 The name is finalize
+	 The exceptions are (Throwable)
+	 The parameters types are ()
+	 The return type is void
+	 The modifiers are protected
+	===========================================
+	 The name is wait
+	 The exceptions are (InterruptedException)
+	 The parameters types are (long,int)
+	 The return type is void
+	 The modifiers are public final
+	===========================================
+	 The name is wait
+	 The exceptions are (InterruptedException)
+	 The parameters types are (long)
+	 The return type is void
+	 The modifiers are public final native
+	===========================================
+	 The name is wait
+	 The exceptions are (InterruptedException)
+	 The parameters types are ()
+	 The return type is void
+	 The modifiers are public final
+	===========================================
+	 The name is equals
+	 The exceptions are ()
+	 The parameters types are (Object)
+	 The return type is boolean
+	 The modifiers are public
+	===========================================
+	 The name is toString
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is String
+	 The modifiers are public
+	===========================================
+	 The name is hashCode
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is int
+	 The modifiers are public native
+	===========================================
+	 The name is getClass
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is Class
+	 The modifiers are public final native
+	===========================================
+	 The name is clone
+	 The exceptions are (CloneNotSupportedException)
+	 The parameters types are ()
+	 The return type is Object
+	 The modifiers are protected native
+	===========================================
+	 The name is registerNatives
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is void
+	 The modifiers are private static native
+	===========================================
+	 The name is notify
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is void
+	 The modifiers are public final native
+	===========================================
+	 The name is notifyAll
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is void
+	 The modifiers are public final native
+	-----------------End--------------------------
+
+ The interfaces are: Serializable,Comparable,CharSequence
+	-----------------Start--------------------------
+	The class name is Serializable
+	 There is no superclass
+	 There are no interfaces
+	-----------------End--------------------------
+	-----------------Start--------------------------
+	The class name is Comparable
+	 There is no superclass
+	 There are no interfaces
+
+	The methods are:
+	===========================================
+	 The name is compareTo
+	 The exceptions are ()
+	 The parameters types are (Object)
+	 The return type is int
+	 The modifiers are public abstract
+	-----------------End--------------------------
+	-----------------Start--------------------------
+	The class name is CharSequence
+	 There is no superclass
+	 There are no interfaces
+
+	The methods are:
+	===========================================
+	 The name is toString
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is String
+	 The modifiers are public abstract
+	===========================================
+	 The name is length
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is int
+	 The modifiers are public abstract
+	===========================================
+	 The name is charAt
+	 The exceptions are ()
+	 The parameters types are (int)
+	 The return type is char
+	 The modifiers are public abstract
+	===========================================
+	 The name is subSequence
+	 The exceptions are ()
+	 The parameters types are (int,int)
+	 The return type is CharSequence
+	 The modifiers are public abstract
+	===========================================
+	 The name is chars
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is IntStream
+	 The modifiers are public
+	===========================================
+	 The name is codePoints
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is IntStream
+	 The modifiers are public
+	===========================================
+	 The name is lambda$codePoints$1
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is OfInt
+	 The modifiers are private
+	===========================================
+	 The name is lambda$chars$0
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is OfInt
+	 The modifiers are private
+	-----------------End--------------------------
+
+The constructors are:
+===========================================
+ The name is java.lang.String
+ The parameters types are (byte[],int,int)
+ The modifiers are public
+===========================================
+ The name is java.lang.String
+ The parameters types are (byte[],Charset)
+ The modifiers are public
+===========================================
+ The name is java.lang.String
+ The parameters types are (byte[],String)
+ The modifiers are public
+===========================================
+ The name is java.lang.String
+ The parameters types are (byte[],int,int,Charset)
+ The modifiers are public
+===========================================
+ The name is java.lang.String
+ The parameters types are (byte[],int,int,String)
+ The modifiers are public
+===========================================
+ The name is java.lang.String
+ The parameters types are (char[],boolean)
+ The modifiers are 
+===========================================
+ The name is java.lang.String
+ The parameters types are (StringBuilder)
+ The modifiers are public
+===========================================
+ The name is java.lang.String
+ The parameters types are (StringBuffer)
+ The modifiers are public
+===========================================
+ The name is java.lang.String
+ The parameters types are (byte[])
+ The modifiers are public
+===========================================
+ The name is java.lang.String
+ The parameters types are (int[],int,int)
+ The modifiers are public
+===========================================
+ The name is java.lang.String
+ The parameters types are ()
+ The modifiers are public
+===========================================
+ The name is java.lang.String
+ The parameters types are (char[])
+ The modifiers are public
+===========================================
+ The name is java.lang.String
+ The parameters types are (String)
+ The modifiers are public
+===========================================
+ The name is java.lang.String
+ The parameters types are (char[],int,int)
+ The modifiers are public
+===========================================
+ The name is java.lang.String
+ The parameters types are (byte[],int)
+ The modifiers are public
+===========================================
+ The name is java.lang.String
+ The parameters types are (byte[],int,int,int)
+ The modifiers are public
+
+The methods are:
+===========================================
+ The name is equals
+ The exceptions are ()
+ The parameters types are (Object)
+ The return type is boolean
+ The modifiers are public
+===========================================
+ The name is toString
+ The exceptions are ()
+ The parameters types are ()
+ The return type is String
+ The modifiers are public
+===========================================
+ The name is hashCode
+ The exceptions are ()
+ The parameters types are ()
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is compareTo
+ The exceptions are ()
+ The parameters types are (Object)
+ The return type is int
+ The modifiers are public volatile
+===========================================
+ The name is compareTo
+ The exceptions are ()
+ The parameters types are (String)
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is indexOf
+ The exceptions are ()
+ The parameters types are (String,int)
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is indexOf
+ The exceptions are ()
+ The parameters types are (char[],int,int,String,int)
+ The return type is int
+ The modifiers are static
+===========================================
+ The name is indexOf
+ The exceptions are ()
+ The parameters types are (char[],int,int,char[],int,int,int)
+ The return type is int
+ The modifiers are static
+===========================================
+ The name is indexOf
+ The exceptions are ()
+ The parameters types are (int)
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is indexOf
+ The exceptions are ()
+ The parameters types are (String)
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is indexOf
+ The exceptions are ()
+ The parameters types are (int,int)
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is valueOf
+ The exceptions are ()
+ The parameters types are (char)
+ The return type is String
+ The modifiers are public static
+===========================================
+ The name is valueOf
+ The exceptions are ()
+ The parameters types are (Object)
+ The return type is String
+ The modifiers are public static
+===========================================
+ The name is valueOf
+ The exceptions are ()
+ The parameters types are (boolean)
+ The return type is String
+ The modifiers are public static
+===========================================
+ The name is valueOf
+ The exceptions are ()
+ The parameters types are (char[],int,int)
+ The return type is String
+ The modifiers are public static
+===========================================
+ The name is valueOf
+ The exceptions are ()
+ The parameters types are (char[])
+ The return type is String
+ The modifiers are public static
+===========================================
+ The name is valueOf
+ The exceptions are ()
+ The parameters types are (double)
+ The return type is String
+ The modifiers are public static
+===========================================
+ The name is valueOf
+ The exceptions are ()
+ The parameters types are (float)
+ The return type is String
+ The modifiers are public static
+===========================================
+ The name is valueOf
+ The exceptions are ()
+ The parameters types are (long)
+ The return type is String
+ The modifiers are public static
+===========================================
+ The name is valueOf
+ The exceptions are ()
+ The parameters types are (int)
+ The return type is String
+ The modifiers are public static
+===========================================
+ The name is checkBounds
+ The exceptions are ()
+ The parameters types are (byte[],int,int)
+ The return type is void
+ The modifiers are private static
+===========================================
+ The name is length
+ The exceptions are ()
+ The parameters types are ()
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is isEmpty
+ The exceptions are ()
+ The parameters types are ()
+ The return type is boolean
+ The modifiers are public
+===========================================
+ The name is charAt
+ The exceptions are ()
+ The parameters types are (int)
+ The return type is char
+ The modifiers are public
+===========================================
+ The name is codePointAt
+ The exceptions are ()
+ The parameters types are (int)
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is codePointBefore
+ The exceptions are ()
+ The parameters types are (int)
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is codePointCount
+ The exceptions are ()
+ The parameters types are (int,int)
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is offsetByCodePoints
+ The exceptions are ()
+ The parameters types are (int,int)
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is getChars
+ The exceptions are ()
+ The parameters types are (int,int,char[],int)
+ The return type is void
+ The modifiers are public
+===========================================
+ The name is getChars
+ The exceptions are ()
+ The parameters types are (char[],int)
+ The return type is void
+ The modifiers are 
+===========================================
+ The name is getBytes
+ The exceptions are ()
+ The parameters types are ()
+ The return type is byte[]
+ The modifiers are public
+===========================================
+ The name is getBytes
+ The exceptions are (UnsupportedEncodingException)
+ The parameters types are (String)
+ The return type is byte[]
+ The modifiers are public
+===========================================
+ The name is getBytes
+ The exceptions are ()
+ The parameters types are (int,int,byte[],int)
+ The return type is void
+ The modifiers are public
+===========================================
+ The name is getBytes
+ The exceptions are ()
+ The parameters types are (Charset)
+ The return type is byte[]
+ The modifiers are public
+===========================================
+ The name is contentEquals
+ The exceptions are ()
+ The parameters types are (StringBuffer)
+ The return type is boolean
+ The modifiers are public
+===========================================
+ The name is contentEquals
+ The exceptions are ()
+ The parameters types are (CharSequence)
+ The return type is boolean
+ The modifiers are public
+===========================================
+ The name is nonSyncContentEquals
+ The exceptions are ()
+ The parameters types are (AbstractStringBuilder)
+ The return type is boolean
+ The modifiers are private
+===========================================
+ The name is equalsIgnoreCase
+ The exceptions are ()
+ The parameters types are (String)
+ The return type is boolean
+ The modifiers are public
+===========================================
+ The name is compareToIgnoreCase
+ The exceptions are ()
+ The parameters types are (String)
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is regionMatches
+ The exceptions are ()
+ The parameters types are (int,String,int,int)
+ The return type is boolean
+ The modifiers are public
+===========================================
+ The name is regionMatches
+ The exceptions are ()
+ The parameters types are (boolean,int,String,int,int)
+ The return type is boolean
+ The modifiers are public
+===========================================
+ The name is startsWith
+ The exceptions are ()
+ The parameters types are (String)
+ The return type is boolean
+ The modifiers are public
+===========================================
+ The name is startsWith
+ The exceptions are ()
+ The parameters types are (String,int)
+ The return type is boolean
+ The modifiers are public
+===========================================
+ The name is endsWith
+ The exceptions are ()
+ The parameters types are (String)
+ The return type is boolean
+ The modifiers are public
+===========================================
+ The name is indexOfSupplementary
+ The exceptions are ()
+ The parameters types are (int,int)
+ The return type is int
+ The modifiers are private
+===========================================
+ The name is lastIndexOf
+ The exceptions are ()
+ The parameters types are (int,int)
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is lastIndexOf
+ The exceptions are ()
+ The parameters types are (char[],int,int,char[],int,int,int)
+ The return type is int
+ The modifiers are static
+===========================================
+ The name is lastIndexOf
+ The exceptions are ()
+ The parameters types are (char[],int,int,String,int)
+ The return type is int
+ The modifiers are static
+===========================================
+ The name is lastIndexOf
+ The exceptions are ()
+ The parameters types are (String,int)
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is lastIndexOf
+ The exceptions are ()
+ The parameters types are (int)
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is lastIndexOf
+ The exceptions are ()
+ The parameters types are (String)
+ The return type is int
+ The modifiers are public
+===========================================
+ The name is lastIndexOfSupplementary
+ The exceptions are ()
+ The parameters types are (int,int)
+ The return type is int
+ The modifiers are private
+===========================================
+ The name is substring
+ The exceptions are ()
+ The parameters types are (int)
+ The return type is String
+ The modifiers are public
+===========================================
+ The name is substring
+ The exceptions are ()
+ The parameters types are (int,int)
+ The return type is String
+ The modifiers are public
+===========================================
+ The name is subSequence
+ The exceptions are ()
+ The parameters types are (int,int)
+ The return type is CharSequence
+ The modifiers are public
+===========================================
+ The name is concat
+ The exceptions are ()
+ The parameters types are (String)
+ The return type is String
+ The modifiers are public
+===========================================
+ The name is replace
+ The exceptions are ()
+ The parameters types are (char,char)
+ The return type is String
+ The modifiers are public
+===========================================
+ The name is replace
+ The exceptions are ()
+ The parameters types are (CharSequence,CharSequence)
+ The return type is String
+ The modifiers are public
+===========================================
+ The name is matches
+ The exceptions are ()
+ The parameters types are (String)
+ The return type is boolean
+ The modifiers are public
+===========================================
+ The name is contains
+ The exceptions are ()
+ The parameters types are (CharSequence)
+ The return type is boolean
+ The modifiers are public
+===========================================
+ The name is replaceFirst
+ The exceptions are ()
+ The parameters types are (String,String)
+ The return type is String
+ The modifiers are public
+===========================================
+ The name is replaceAll
+ The exceptions are ()
+ The parameters types are (String,String)
+ The return type is String
+ The modifiers are public
+===========================================
+ The name is split
+ The exceptions are ()
+ The parameters types are (String,int)
+ The return type is String[]
+ The modifiers are public
+===========================================
+ The name is split
+ The exceptions are ()
+ The parameters types are (String)
+ The return type is String[]
+ The modifiers are public
+===========================================
+ The name is join
+ The exceptions are ()
+ The parameters types are (CharSequence,CharSequence[])
+ The return type is String
+ The modifiers are public static transient
+===========================================
+ The name is join
+ The exceptions are ()
+ The parameters types are (CharSequence,Iterable)
+ The return type is String
+ The modifiers are public static
+===========================================
+ The name is toLowerCase
+ The exceptions are ()
+ The parameters types are (Locale)
+ The return type is String
+ The modifiers are public
+===========================================
+ The name is toLowerCase
+ The exceptions are ()
+ The parameters types are ()
+ The return type is String
+ The modifiers are public
+===========================================
+ The name is toUpperCase
+ The exceptions are ()
+ The parameters types are ()
+ The return type is String
+ The modifiers are public
+===========================================
+ The name is toUpperCase
+ The exceptions are ()
+ The parameters types are (Locale)
+ The return type is String
+ The modifiers are public
+===========================================
+ The name is trim
+ The exceptions are ()
+ The parameters types are ()
+ The return type is String
+ The modifiers are public
+===========================================
+ The name is toCharArray
+ The exceptions are ()
+ The parameters types are ()
+ The return type is char[]
+ The modifiers are public
+===========================================
+ The name is format
+ The exceptions are ()
+ The parameters types are (Locale,String,Object[])
+ The return type is String
+ The modifiers are public static transient
+===========================================
+ The name is format
+ The exceptions are ()
+ The parameters types are (String,Object[])
+ The return type is String
+ The modifiers are public static transient
+===========================================
+ The name is copyValueOf
+ The exceptions are ()
+ The parameters types are (char[],int,int)
+ The return type is String
+ The modifiers are public static
+===========================================
+ The name is copyValueOf
+ The exceptions are ()
+ The parameters types are (char[])
+ The return type is String
+ The modifiers are public static
+===========================================
+ The name is intern
+ The exceptions are ()
+ The parameters types are ()
+ The return type is String
+ The modifiers are public native
+
+The fields are:
+===========================================
+ The name is value
+ The type is char[]
+ The modifiers are private final
+ The value of the field is [T,e,s,t, ,S,t,r,i,n,g]
+	This class is an array type char[]
+	This is an array of char
+	This array length is  11
+	The contents of the array is : [T,e,s,t, ,S,t,r,i,n,g]
+	-----------------Start--------------------------
+	The class name is char[]
+
+	 The super class is Object
+		-----------------Start--------------------------
+		The class name is Object
+		 There is no superclass
+		 There are no interfaces
+
+		The constructors are:
+		===========================================
+		 The name is java.lang.Object
+		 The parameters types are ()
+		 The modifiers are public
+
+		The methods are:
+		===========================================
+		 The name is finalize
+		 The exceptions are (Throwable)
+		 The parameters types are ()
+		 The return type is void
+		 The modifiers are protected
+		===========================================
+		 The name is wait
+		 The exceptions are (InterruptedException)
+		 The parameters types are (long,int)
+		 The return type is void
+		 The modifiers are public final
+		===========================================
+		 The name is wait
+		 The exceptions are (InterruptedException)
+		 The parameters types are (long)
+		 The return type is void
+		 The modifiers are public final native
+		===========================================
+		 The name is wait
+		 The exceptions are (InterruptedException)
+		 The parameters types are ()
+		 The return type is void
+		 The modifiers are public final
+		===========================================
+		 The name is equals
+		 The exceptions are ()
+		 The parameters types are (Object)
+		 The return type is boolean
+		 The modifiers are public
+		===========================================
+		 The name is toString
+		 The exceptions are ()
+		 The parameters types are ()
+		 The return type is String
+		 The modifiers are public
+		===========================================
+		 The name is hashCode
+		 The exceptions are ()
+		 The parameters types are ()
+		 The return type is int
+		 The modifiers are public native
+		===========================================
+		 The name is getClass
+		 The exceptions are ()
+		 The parameters types are ()
+		 The return type is Class
+		 The modifiers are public final native
+		===========================================
+		 The name is clone
+		 The exceptions are (CloneNotSupportedException)
+		 The parameters types are ()
+		 The return type is Object
+		 The modifiers are protected native
+		===========================================
+		 The name is registerNatives
+		 The exceptions are ()
+		 The parameters types are ()
+		 The return type is void
+		 The modifiers are private static native
+		===========================================
+		 The name is notify
+		 The exceptions are ()
+		 The parameters types are ()
+		 The return type is void
+		 The modifiers are public final native
+		===========================================
+		 The name is notifyAll
+		 The exceptions are ()
+		 The parameters types are ()
+		 The return type is void
+		 The modifiers are public final native
+		-----------------End--------------------------
+
+	 The interfaces are: Cloneable,Serializable
+		-----------------Start--------------------------
+		The class name is Cloneable
+		 There is no superclass
+		 There are no interfaces
+		-----------------End--------------------------
+		-----------------Start--------------------------
+		The class name is Serializable
+		 There is no superclass
+		 There are no interfaces
+		-----------------End--------------------------
+	-----------------End--------------------------
+===========================================
+ The name is hash
+ The type is int
+ The modifiers are private
+ The value of the field is 0
+===========================================
+ The name is serialVersionUID
+ The type is long
+ The modifiers are private static final
+ The value of the field is -6849794470754667710
+===========================================
+ The name is serialPersistentFields
+ The type is ObjectStreamField[]
+ The modifiers are private static final
+ The value of the field is []
+	This class is an array type ObjectStreamField[]
+	This is an array of ObjectStreamField
+	This array length is  0
+	The contents of the array is : []
+	-----------------Start--------------------------
+	The class name is ObjectStreamField[]
+
+	 The super class is Object
+		-----------------Start--------------------------
+		The class name is Object
+		 There is no superclass
+		 There are no interfaces
+
+		The constructors are:
+		===========================================
+		 The name is java.lang.Object
+		 The parameters types are ()
+		 The modifiers are public
+
+		The methods are:
+		===========================================
+		 The name is finalize
+		 The exceptions are (Throwable)
+		 The parameters types are ()
+		 The return type is void
+		 The modifiers are protected
+		===========================================
+		 The name is wait
+		 The exceptions are (InterruptedException)
+		 The parameters types are (long,int)
+		 The return type is void
+		 The modifiers are public final
+		===========================================
+		 The name is wait
+		 The exceptions are (InterruptedException)
+		 The parameters types are (long)
+		 The return type is void
+		 The modifiers are public final native
+		===========================================
+		 The name is wait
+		 The exceptions are (InterruptedException)
+		 The parameters types are ()
+		 The return type is void
+		 The modifiers are public final
+		===========================================
+		 The name is equals
+		 The exceptions are ()
+		 The parameters types are (Object)
+		 The return type is boolean
+		 The modifiers are public
+		===========================================
+		 The name is toString
+		 The exceptions are ()
+		 The parameters types are ()
+		 The return type is String
+		 The modifiers are public
+		===========================================
+		 The name is hashCode
+		 The exceptions are ()
+		 The parameters types are ()
+		 The return type is int
+		 The modifiers are public native
+		===========================================
+		 The name is getClass
+		 The exceptions are ()
+		 The parameters types are ()
+		 The return type is Class
+		 The modifiers are public final native
+		===========================================
+		 The name is clone
+		 The exceptions are (CloneNotSupportedException)
+		 The parameters types are ()
+		 The return type is Object
+		 The modifiers are protected native
+		===========================================
+		 The name is registerNatives
+		 The exceptions are ()
+		 The parameters types are ()
+		 The return type is void
+		 The modifiers are private static native
+		===========================================
+		 The name is notify
+		 The exceptions are ()
+		 The parameters types are ()
+		 The return type is void
+		 The modifiers are public final native
+		===========================================
+		 The name is notifyAll
+		 The exceptions are ()
+		 The parameters types are ()
+		 The return type is void
+		 The modifiers are public final native
+		-----------------End--------------------------
+
+	 The interfaces are: Cloneable,Serializable
+		-----------------Start--------------------------
+		The class name is Cloneable
+		 There is no superclass
+		 There are no interfaces
+		-----------------End--------------------------
+		-----------------Start--------------------------
+		The class name is Serializable
+		 There is no superclass
+		 There are no interfaces
+		-----------------End--------------------------
+	-----------------End--------------------------
+===========================================
+ The name is CASE_INSENSITIVE_ORDER
+ The type is Comparator
+ The modifiers are public static final
+ The value of the field is java.util.Comparator@6f539caf
+	-----------------Start--------------------------
+	The class name is Comparator
+	 There is no superclass
+	 There are no interfaces
+
+	The methods are:
+	===========================================
+	 The name is equals
+	 The exceptions are ()
+	 The parameters types are (Object)
+	 The return type is boolean
+	 The modifiers are public abstract
+	===========================================
+	 The name is compare
+	 The exceptions are ()
+	 The parameters types are (Object,Object)
+	 The return type is int
+	 The modifiers are public abstract
+	===========================================
+	 The name is reversed
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is Comparator
+	 The modifiers are public
+	===========================================
+	 The name is thenComparing
+	 The exceptions are ()
+	 The parameters types are (Function)
+	 The return type is Comparator
+	 The modifiers are public
+	===========================================
+	 The name is thenComparing
+	 The exceptions are ()
+	 The parameters types are (Function,Comparator)
+	 The return type is Comparator
+	 The modifiers are public
+	===========================================
+	 The name is thenComparing
+	 The exceptions are ()
+	 The parameters types are (Comparator)
+	 The return type is Comparator
+	 The modifiers are public
+	===========================================
+	 The name is thenComparingInt
+	 The exceptions are ()
+	 The parameters types are (ToIntFunction)
+	 The return type is Comparator
+	 The modifiers are public
+	===========================================
+	 The name is thenComparingLong
+	 The exceptions are ()
+	 The parameters types are (ToLongFunction)
+	 The return type is Comparator
+	 The modifiers are public
+	===========================================
+	 The name is thenComparingDouble
+	 The exceptions are ()
+	 The parameters types are (ToDoubleFunction)
+	 The return type is Comparator
+	 The modifiers are public
+	===========================================
+	 The name is reverseOrder
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is Comparator
+	 The modifiers are public static
+	===========================================
+	 The name is naturalOrder
+	 The exceptions are ()
+	 The parameters types are ()
+	 The return type is Comparator
+	 The modifiers are public static
+	===========================================
+	 The name is nullsFirst
+	 The exceptions are ()
+	 The parameters types are (Comparator)
+	 The return type is Comparator
+	 The modifiers are public static
+	===========================================
+	 The name is nullsLast
+	 The exceptions are ()
+	 The parameters types are (Comparator)
+	 The return type is Comparator
+	 The modifiers are public static
+	===========================================
+	 The name is comparing
+	 The exceptions are ()
+	 The parameters types are (Function,Comparator)
+	 The return type is Comparator
+	 The modifiers are public static
+	===========================================
+	 The name is comparing
+	 The exceptions are ()
+	 The parameters types are (Function)
+	 The return type is Comparator
+	 The modifiers are public static
+	===========================================
+	 The name is comparingInt
+	 The exceptions are ()
+	 The parameters types are (ToIntFunction)
+	 The return type is Comparator
+	 The modifiers are public static
+	===========================================
+	 The name is comparingLong
+	 The exceptions are ()
+	 The parameters types are (ToLongFunction)
+	 The return type is Comparator
+	 The modifiers are public static
+	===========================================
+	 The name is comparingDouble
+	 The exceptions are ()
+	 The parameters types are (ToDoubleFunction)
+	 The return type is Comparator
+	 The modifiers are public static
+	===========================================
+	 The name is $deserializeLambda$
+	 The exceptions are ()
+	 The parameters types are (SerializedLambda)
+	 The return type is Object
+	 The modifiers are private static
+	===========================================
+	 The name is lambda$comparingDouble$8dcf42ea$1
+	 The exceptions are ()
+	 The parameters types are (ToDoubleFunction,Object,Object)
+	 The return type is int
+	 The modifiers are private static
+	===========================================
+	 The name is lambda$comparingLong$6043328a$1
+	 The exceptions are ()
+	 The parameters types are (ToLongFunction,Object,Object)
+	 The return type is int
+	 The modifiers are private static
+	===========================================
+	 The name is lambda$comparingInt$7b0bb60$1
+	 The exceptions are ()
+	 The parameters types are (ToIntFunction,Object,Object)
+	 The return type is int
+	 The modifiers are private static
+	===========================================
+	 The name is lambda$comparing$77a9974f$1
+	 The exceptions are ()
+	 The parameters types are (Function,Object,Object)
+	 The return type is int
+	 The modifiers are private static
+	===========================================
+	 The name is lambda$comparing$ea9a8b3a$1
+	 The exceptions are ()
+	 The parameters types are (Comparator,Function,Object,Object)
+	 The return type is int
+	 The modifiers are private static
+	===========================================
+	 The name is lambda$thenComparing$36697e65$1
+	 The exceptions are ()
+	 The parameters types are (Comparator,Object,Object)
+	 The return type is int
+	 The modifiers are private
+	-----------------End--------------------------
+-----------------End--------------------------
+======================================================
