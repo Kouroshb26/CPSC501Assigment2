@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
  * @author kourosh
  * @since 2019-10-23
  */
-public class inspectorBonus {
+public class InspectorBonus {
 
     public static void main(String[] args) { //Example arguments: Inspector ClassD true
         if (args.length != 3) {

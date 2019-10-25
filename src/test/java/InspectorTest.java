@@ -27,23 +27,23 @@ public class InspectorTest {
 
     @Test
     public void superClass() {
-        assertEquals(" The super class is Object", inspector.superClass(String.class, new String(), false, 0));
+        assertEquals(" The super class is Object", inspector.superClass(String.class, new String(), false, 0, ""));
     }
 
     @Test
     public void noSuperClass() {
-        assertEquals(" There is no superclass", inspector.superClass(Object.class, new Object(), false, 0));
+        assertEquals(" There is no superclass", inspector.superClass(Object.class, new Object(), false, 0, ""));
     }
 
     @Test
     public void interfaceClasses() {
-        assertEquals(" The interfaces are: Serializable,Comparable,CharSequence", inspector.interfaces(String.class, new String(), false, 0));
+        assertEquals(" The interfaces are: Serializable,Comparable,CharSequence", inspector.interfaces(String.class, new String(), false, 0, ""));
 
     }
 
     @Test
     public void noInterfaceClasses() {
-        assertEquals(" There are no interfaces", inspector.interfaces(Object.class, new Object(), false, 0));
+        assertEquals(" There are no interfaces", inspector.interfaces(Object.class, new Object(), false, 0, ""));
 
     }
 
